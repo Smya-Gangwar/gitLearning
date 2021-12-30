@@ -185,3 +185,64 @@ ANS = A
 _______________________________________________________________________________QUES 3
 
 FAQs--------------------------------------------
+Q1 How we got the formula for a node label's complement?
+ANS Since, for a node (n'-start)=(end-n) => n'=end+start-n. And, on the basis of observation [start = (2^level no) = llv(last level value)] and [end = 2*llv-1]. Therefore, n'=(2*llv-1)+(llv)-n = 3*llv-1-n where, n is label given.
+
+Q2 What is the llv variable representing?
+ANS It represents the last level's value on which our node with given label lies and level value is given as 2^(level number).
+
+Q3 What is the significance of 'llv /= 2;'?
+ANS In upper while loop, llv gets updated 1 time extra. So, to get last level value we update llv by llv/2 using this statement.
+
+Q4 What is the significance of 'int par = comp / 2;'?
+ANS It is basically calculating the parent node's label for the calculated complementary node.
+
+Q5 Are we creating a tree?
+ANS No, actually no tree has been created. We are just working with node labels and formulas.
+
+HINTS-------------------------------------------
+1. No tree formation is required.
+2. Based on the label of the current node, find what the label must be for the parent of that node.
+3. Use the fact that in normal binary tree, parent is calulated as node_label/2.
+4. In zig zag binary tree, directions has been swapped. So, for a node calculate node's complement on the same level and find parent for that.
+5. To find node's complement drive a formula using the fact that n and n' will be equidistant from the start and end of that level respectively.
+
+MCQs--------------------------------------------
+Q1 If we are at a node'n', then what will be the label of it's parent node in a normal complete binary tree?
+A) (2^n)
+B) (n/2)
+C) (n+1)/2
+D) (n-1)/2
+
+ANS = B
+
+Q2 What will be the time complexity of this approach with n=label?
+A) O(LOG N)
+B) O(N)
+C) O(N LOG N)
+D) O(N^2)
+
+ANS = A
+
+Q3 What will be the space complexity of this approach with n=label?
+A) O(LOG N)
+B) O(N)
+C) O(N LOG N)
+D) O(N^2)
+
+ANS = A
+
+Q4 Is binary tree symmetric?
+A) NO
+B) YES
+C) MAY BE
+
+ANS = B
+
+Q5 Time complexity of Collections.reverse() method?
+A) LOGARITHMIC
+B) QUADRATIC
+C) LINEAR
+D) EXPONENTIAL
+
+ANS = C

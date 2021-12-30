@@ -246,3 +246,24 @@ C) LINEAR
 D) EXPONENTIAL
 
 ANS = C
+
+Ques : Word Search li_____________________________________________________________________________________
+
+FAQs---------------------------------------------
+Q1 Explain the approach used.
+ANS To find all the strings in crossword, we iterate over all characters in crossword and for each character check whether any string to be found has initial as this character. Instead of picking a particular string and checking its existence in whole crossword. This will result in reduced time complexity.
+
+Q2 What is the significance of node.str?
+ANS It marks the ending of a complete string.
+
+Q3 What is the significance of node.count?
+ANS It represents how many strings are using that node.
+
+Q4 Name the algorithm technique used.
+ANS Backtracking
+
+Q5 What is the use of checking 'if (child.str != null)' condition?
+ANS If we got a node whose str data member value is not null, it represents the end of a string means a complete string has been reached. So, add it in ans arraylist.
+
+MCQ---------------------------------------------
+

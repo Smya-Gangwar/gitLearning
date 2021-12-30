@@ -266,4 +266,53 @@ Q5 What is the use of checking 'if (child.str != null)' condition?
 ANS If we got a node whose str data member value is not null, it represents the end of a string means a complete string has been reached. So, add it in ans arraylist.
 
 MCQ---------------------------------------------
+Q1) Trie is also known as _________
+a) Digital Tree
+b) Treap
+c) Binomial Tree
+d) 2-3 Tree
+ANS = A
 
+Q2) Which of the following is the efficient data structure for searching words in dictionaries?
+a) BST
+b) Linked List
+c) Balancded BST
+d) Trie
+ANS = D
+
+Q3) Following code snippet is the function to insert a string in a trie. Find the missing line.
+    for (int i = 0; i < s.length(); i++) {
+      char ch = s.charAt(i);
+      if (curr.childs[ch - 'a'] == null) {
+        curr.childs[ch - 'a'] = new Node();
+        curr.count++;
+      }
+      ______________________________________
+    }
+    curr.str = s;
+a) curr = curr.childs[(ch - 'a')++];
+b) curr = curr.childs[ch];
+c) curr = curr.childs[ch - 'a'];
+d) Nothing is missing
+ANS = C
+
+Q4) Which of the following is not true?
+a) Trie requires less storage space than hashing
+b) Trie allows listing of all the words with same prefix
+c) Tries are collision free
+d) Trie is also known as prefix tree
+ANS = A
+
+Q5) What can be the maximum depth of the trie with n strings and m as the maximum sting the length?
+a) log2n
+b) log2m
+c) n
+d) m
+ANS = D
+
+HINTS------------------------------------------
+1) Try to use Trie data structure for efficient searching.
+2) Make a trie for all the strings need to be searched in crossword puzzle.
+3) Now, iterate over all the characters in crossword and check for any word with character as its initial.
+4) Proceed for matching characters in order to match further string.
+5) Use backtracking to check rest of the characters of word with the help of an visited array.

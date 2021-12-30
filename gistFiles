@@ -1,0 +1,86 @@
+FAQs---------------------------------------------------------------------------
+
+Q1 Can we use a stack instead of Queue?
+ANS No, because in that case order of elements gets changed as expected.
+
+Q2 Why are we taking a 'size' variable, instead of using 'queue.size()' method?
+ANS Because in inner while loop, further elemnets will also get added in the queue due to which the value of this method gets changed continuously but we want to process only those elements that were present initially, in one go.
+
+Q3 What are we storing in arraylist of arraylist?
+ANS In this data structure each inner arraylist is representing a diagonal of tree.
+
+Q4 Can we use another approach to solve this problem?
+ANS Yes, we can solve this problem using recursive approach too.
+
+Q5 What does a an empty queue signifies?
+ANS It signifies that all elements of tree has been processed.
+
+HINTS-------------------------------------------------------------------------
+
+1. All the nodes that are lying on the line of slope -1 lies in the same diagonal. 
+
+2. Now, create an arrayList of arraylist 'ans' to store the different diagonals in each arraylist.
+
+3. At a node, it's right child will lie in the same diagonal as of node while left child will act as a initial node of some component in next diagonal.
+
+4. Then we perform the diagonal order traversal with the help of an extra queue i.e. while we are at 1 diagonal, prepare next diagonal correspondingly.
+
+5. Now, each time while accessing the node we add its left child in the queue i.e. next diagonal, and keep moving to the right child until reaches a NULL value and add it in the 'smallAns' arraylist i.e. current diagonal.
+
+MCQ------------------------------------------------------------------------------
+
+Q1 What is the time complexity of used approach?
+A) O(N)
+B) O(N^2)
+C) O(N LOG N)
+D) O(LOG N)
+
+ANS = A
+
+Q2               2
+               /   \
+             /       \
+           7           15 
+        /    \       /    \
+      3        6  14        9
+        \                    \
+          4                   13 
+List all the nodes belonging to same DIAGONAL level.
+A) {3},{7,4},{2,6,14},{15},{9},{13}
+B) {2},{7,15},{3,6,14,9},{4,13}
+C) {2,15,9,13},{7,6,14},{3,4}
+D) None of the above
+
+ANS = C
+
+Q3 Queue implements:
+A FIFO(First In First Out)
+B LIFO(Last In First Out)
+C both (a) and (b)
+D none of the above
+
+ANS = A
+
+Q4               2
+               /   \
+             /       \
+           7           15 
+        /    \       /    \
+      3        6  14        9
+        \                    \
+          4                   13 
+What will be the number of diagonals present in above tree?
+A) 2
+B) 3
+C) 4
+D) None of the above
+
+ANS = B
+
+Q5 "While we are at one diagonal then, in order to prepare next diagonal we add ______ nodes of all the nodes in queue." Complete the statement.
+A) right
+B) same
+C) left
+D) Wrong statement
+
+ANS = C
